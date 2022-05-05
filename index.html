@@ -1,58 +1,236 @@
 <!DOCTYPE html>
 
 <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <title>HomePage</title>
     <style>
         *,
         html {
             margin: 0;
             padding: 0;
-            border: 0;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
-        html {
-            width: 100%;
-            height: 100%;
-        }
 
         body {
             width: 100%;
             height: 100%;
             position: relative;
-            background-color: rgb(233, 124, 124);
+            background-color: rgb(240, 211, 211);
         }
 
-        .center {
-            width: 100%;
-            height: 50%;
-            margin: 0;
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img{
+            width: 150px;
+        }
+
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li a{
+            color: antiquewhite;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after{
+            content: '';
+            width:0%;
+            height: 2px;
+            background: #f44336;
+            display:block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after{
+            width:100%;
+        }
+
+        .text-box{
+            width: 90%;
+            color:antiquewhite;
             position: absolute;
-            top: 50%;
+            top: 30%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            transform: translate(-50%,-50%);
             text-align: center;
         }
 
-        h1 {
-            font-size: 144px;
+        .text-box h1{
+            font-size: 62px;
         }
 
-        p {
-            font-size: 64px;
+        .text-box h2{
+            font-size: 45px;
         }
+
+        .text-box p{
+            margin: 10px 0 40px;
+            font-size: 14px;
+            color: antiquewhite;   
+        }
+
+        .header{
+            min-height: 100vh;
+            width: 100%;background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/banner.png);
+            background-position: center;
+            background-size: relative;
+        }
+
+        .resources{
+            width:80%;
+            margin:auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .row{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .res-col{
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+
+        .res-col:hover{
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .contact{
+            width:80%;
+            margin:auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        p{
+            color: black;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding:10px;
+        }
+
+        .button{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid whitesmoke;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+
+
+
 
     </style>
 </head>
 
 <body>
-    <div class="center">
-        <h1>Welcome to DTD!</h1>
-        <p>Highest Ranking Gym in the Nation</p>
-        <button class="sign"> Log in </button>
-        <p>Contact us by phone: 555-555-5555 </p>
+<section class="header">
+    <nav>
+        <a href="index.html"> <img src="images/logo.png"> </a>
+        <div class="nav-links">
+            <ul>
+                <li> <a href="index.html"> HOME </a> </li>
+                <li> <a href=""> SIGN IN </a> </li>
+                <li> <a href=""> SIGN UP </a> </li>
+                <li> <a href=""> INVESTMENTS </a> </li>
+             </ul>
+         </div>
+        
+    </nav>
+
+<div class="text-box">
+    <h1>DTD Banking Services</h1>
+    <h2>Partner with us today!!</h2>
+    <p>We are here to help you become the better you! <br>Come see what we have to offer and the trip will be worth it.</p>
+    <a href="" class="button"> Sign Up Today</a>
+</div>
+
+</section>
+
+<section class="resources">
+    
+    <h1>Great Offerings Provided</h1>
+    <p>Here are a few of the many reasons 1.2 Million Users bank with us</p>
+
+    <div class="row">
+        <div class="res-col">
+            <h3>24/7 Assistance</h3>
+            <p>Need help and the local bank is closed?<br>No Worry! DTD has your back with <br>virtual assistance around the clock.</p>
+        </div>
+        <div class="res-col">
+            <h3>ATM vending fee covered.</h3>
+            <p>Hate pesky fees just to withdraw what belongs to you?</p>
+            <br> <p>Here at DTD we got you and that ATM fee covered.</p>
+        </div>
+        <div class="res-col">
+            <h3>Black Owned Business</h3>
+            <p>We are a completely BLACK owned business. Proud to say that we represent our community in a tasteful fashion.</p>
+            <br> <p> Bringing banking back to the culture!</p>
+        </div>
     </div>
+
+
+
+
+
+
+
+</section>
+
+<section class="contact">
+    <h1>Contact Us</h1>
+    <p> You can reach us over the phone, email, or smoke signal.</p>
+    <br>
+    <br>
+    <h3>Phone number:</h3>
+    <p>(555)-555-5555</p>
+    <h3>Email:</h3>
+    <p>DTDsupport@deeteedee.org</p>
+    <h3>Address:</h3>
+    <p>1234 gingerbread Ln Miami Ohio, 45291</p>
+</section>
+
 </body>
 
 </html>
